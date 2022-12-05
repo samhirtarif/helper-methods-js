@@ -1,6 +1,6 @@
 /**
  * @params `array`
- * @params `condition`: Condition to match when getting indexes
+ * @params `condition`: Condition to match when getting indexes. This can be a function or any object / value
  * 
  * @returns an array with indexes that satisfy provided condition
  */
