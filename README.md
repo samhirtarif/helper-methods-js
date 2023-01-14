@@ -1,5 +1,6 @@
 # **Helper methods**
 A package that provides helper methods for common and not-so-common use cases
+Any contributions are welcome!
 
 ## Installation
 ```sh
