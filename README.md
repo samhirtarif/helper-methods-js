@@ -9,6 +9,8 @@ npm install helper-methods-js
 ## Methods
 - [**`deepcopy`**](#deepcopy)
 - [**`dedupe`**](#dedupe)
+- [**`indexesOf`**](#indexesOf)
+- [**`isAsyncFunction`**](#isAsyncFunction)
 
 <br />
 
@@ -58,4 +60,57 @@ const cars = [
 ];
 
 dedupe(cars, (e, i) => e.owner === i.owner)
+```
+---
+<br />
+
+### **`indexesOf`**
+
+This method provides implementation to return indexes of all elements that match a specific condition
+
+| Parameter     | Description     | Default Value |
+| :------------ |:---------------| :-------------|
+| `array`           | The array that needs duplicates removed                | N/A             |
+| `condition`    | It can either be a value or a functions. In case of a function, the function should return `true` or `false`. This condition is executed for each array value and the values for which it returns `true` are added to the list of indexes returned. In case this condition is not provided, elements are removed on equality comparison.    | N/A             |
+
+<br />
+
+#### Sample usage
+```js
+import { indexesOf } from 'helper-methods-js'
+
+const objs = [
+  { age: 21, nationality: "a" },
+  { age: 24, nationality: "a" },
+  { age: 21, nationality: "b" },
+  { age: 32, nationality: "c" },
+  { age: 42, nationality: "b" },
+  { age: 52, nationality: "c" },
+  { age: 21, nationality: "a" },
+]
+
+const indexes = indexesOf(objs, (i: any) => i.nationality === "b")
+```
+---
+<br />
+
+### **`isAsyncFunction`**
+
+This method returns whether a function is async or not.
+
+| Parameter     | Description     | Default Value |
+| :------------ |:---------------| :-------------|
+| `fn`    | The function for which it needs to be determined whether it is async or not.    | N/A             |
+
+<br />
+
+#### Sample usage
+```js
+import { isAsyncFunction } from 'helper-methods-js'
+
+const testFn = async () => {};
+isAsyncFunction(testFn) // returns true
+
+const testFnSync = () => {};
+isAsyncFunction(testFnSync) // returns false
 ```
