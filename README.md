@@ -13,6 +13,7 @@ npm install helper-methods-js
 - [**`dedupe`**](#dedupe)
 - [**`indexesOf`**](#indexesOf)
 - [**`isAsyncFunction`**](#isAsyncFunction)
+- [**`trimDelimeters`**](#trimDelimeters)
 
 <br />
 
@@ -115,4 +116,25 @@ isAsyncFunction(testFn) // returns true
 
 const testFnSync = () => {};
 isAsyncFunction(testFnSync) // returns false
+```
+---
+<br />
+
+### **`trimDelimeters`**
+
+This method takes a string and removes the provided delimeters from the start and end of the string.
+
+| Parameter     | Description     | Default Value |
+| :------------ |:---------------| :-------------|
+| `str`           | The string to be trimed                | N/A             |
+| `delimeters`    | A list of delimeters to be trimned from the start and/or end of the string provided.    | N/A             |
+| `options` (optional)    | An object with values `trimStart` and `trimEnd` that represent if the string should only be trimmed from start and/or end respectively.     | `{ trimStart: true, trimEnd: true }`            |
+
+<br />
+
+#### Sample usage
+```js
+import { trimDelimeters } from 'helper-methods-js'
+
+trimDelimeters("&&*ABC*(&", ["&", "*"]) // outputs "ABC*("
 ```
