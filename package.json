@@ -1,6 +1,6 @@
 {
   "name": "helper-methods-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/samhirtarif/helper-methods-js.git"
@@ -15,7 +15,11 @@
     "remove duplicates",
     "async",
     "indexes",
-    "indexesOf"
+    "indexesOf",
+    "trim",
+    "trim delimeters",
+    "trim start",
+    "trim end"
   ],
   "files": [
     "dist",
